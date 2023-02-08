@@ -1,10 +1,13 @@
-#!/usr/bin/bash
+#!/usr/bin/node
 
-const add = (a, b) => {
-  if (isNaN(a) || isNaN(b)) {
-    console.log('NaN');
-  } else {
-    console.log(a + b);
-  }
-};
-add(parseInt(process.argv[2]), parseInt(process.argv[3]));
+const args = process.argv.slice(2);
+
+const num1 = parseInt(args[0]);
+const num2 = parseInt(args[1]);
+
+function add (a, b) {
+  const sum = a + b;
+  console.log(sum);
+}
+
+add(num1, num2);
